@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap')
+
+*
+    box-sizing: border-box
+    font-family: 'League Spartan', sans-serif
+
+body
+    background-image: url("../images/bg-pattern-bottom-desktop.svg") , url("../images/bg-pattern-top-desktop.svg")
+    background-position: bottom right , top left
+    background-repeat: no-repeat , no-repeat
+    height: 100%
+
+/* start top part */
+
+.top-part 
+    .container
+        display: flex
+        justify-content: space-between
+        padding-top: 50px 
+        margin-bottom: 50px
+        .left-part
+            width: 45% 
+            h1
+                font-size: 3.125rem
+                font-weight: 700
+                white-space: wrap
+                color: #502050
+                margin-top: 0
+                padding-right: 100px
+                line-height: 0.9
+            p
+                font-size: 17px
+                font-weight: 400
+                color: #937b92
+        .right-part
+            width: 45%
+            div
+                display: flex
+                width: 80%
+                height: 15%
+                margin: 10px
+                align-items: center
+                background-color: #f7f2f7
+                justify-content: center
+                color: #502050
+                border-radius: 20px 
+                .image
+                    width: 6.25rem
+                    img
+                        width: 1em
+                        height: 1em
+                &:nth-child(2)
+                    margin-left: 10%
+                &:last-child
+                    margin-left: 20% 
+                p
+                    font-size: .999rem
+                    font-weight: 700
+                    white-space: nowrap
+@media (max-width: 370px) 
+    body
+        background-image: url("../images/bg-pattern-bottom-mobile.svg") , url("../images/bg-pattern-top-mobile.svg")
+
+@media (min-width: 768px) and (max-width: 991px) 
+        .right-part
+            div
+                width: 100% !important
+                p
+                    font-size: .8em !important
+            .text
+                margin-left: 1px !important
+        .left-part
+            h1
+                font-size: 2.7rem !important
+            p
+                font-size: .9rem !important
+
+@media (min-width: 992px) and (max-width: 1199px) 
+    .right-part
+        div
+            p
+                font-size: .9em !important
+            .text
+                margin-left: 30px !important
+    .left-part
+        h1
+            font-size: 3rem !important
+@media (max-width: 882px) 
+    .top-part 
+        .container
+            flex-direction: column
+            padding-top: 35px 
+            .left-part
+                width: 100%
+                h1
+                    padding: 0
+                    font-size: 2.5rem
+            .right-part
+                width: 100%
+                div
+                    width: 100%
+                    margin: 10px 0 !important
+                    flex-direction: column
+
+                    .image
+                        flex-direction: row
+                        
+                    .text
+                        margin: 0 !important           
+/*end top part*/
+/* start bottom part */
+.bottom-part
+    .container
+        display: grid
+        grid-gap: 20px
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))        
+        .inner
+            background-color: #502050
+            padding: 48px 32px
+            border-radius: 10px
+            &:nth-child(2)
+                position: relative
+                top: 25px
+            &:nth-child(3)
+                position: relative
+                top: 50px                               
+            .top-part
+                display: flex
+                img
+                    border-radius: 50%
+                    width: 50px
+                    margin-right: 10px
+                h3
+                    margin: 0
+                    margin-top: 10px
+                    font-size: 17px
+                    font-weight: 700
+                    color: #ffffff
+                p
+                    margin: 0
+                    color: #ee5079
+                    width: 500
+                    font-size: 1rem
+            .bottom-part
+                p
+                    color: white
+                    font-size: 1rem
+                    font-weight: 400
+@media (max-width: 992px)
+    .bottom-part
+        .container
+            .inner
+                &:nth-child(2)
+                    position: relative
+                    top: 0
+                &:nth-child(3)
+                    position: relative
+                    top: 0
